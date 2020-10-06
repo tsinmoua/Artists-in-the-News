@@ -29,7 +29,7 @@
             <ul class="dropdown menu" data-dropdown-menu>
                 <li>
                     <button class="clear button" id="searchbtn">Search</button>
-                    <a href="#Item-2"><input type="text" placeholder="Artist Name" ></a>
+                    <a href="#Item-2"><input type="text" placeholder="Artist Name" id="artist"></a>
                     <ul class="menu">
                         <li><a href="#Item-2A"></a></li>
                         <li><a href="#Item-2B"></a></li>
@@ -42,10 +42,12 @@
     <!-- musical bits -->
     <div class="card">
         <div class="card-section">
-            <img src="assets/img/generic/rectangle-1.jpg">
+            <img id="discimage" src="assets/img/generic/rectangle-1.jpg">
         </div>
-        <div class="card-section">
+        <div class="card-section discography">
             <p>This is a simple card with an image inside a `.card-section`.</p>
+            <ul id="albums">
+            </ul>
         </div>
     </div>
 
