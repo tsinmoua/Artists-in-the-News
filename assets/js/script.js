@@ -6,20 +6,16 @@ var searchTerm = "dogs"
 var queryURLstart = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=2SJ66gVmqttnxa7rA3bmcVBUtPgBI0dT";
 
 
-    $.ajax({
-        url: queryURLstart, 
-        method: "GET"})
-        .then(function(response) {
-            console.log(queryURLstart);
+$.ajax({
+    url: queryURLstart,
+    method: "GET"
+})
+    .then(function (response) {
+        console.log(queryURLstart);
 
-        })
-        
+    })
 
-        
 
-    
-
-// Get the modal
 var modal = [
     document.getElementById("myModal1"),
     document.getElementById("myModal2"),
@@ -34,34 +30,55 @@ var modal = [
     document.getElementById("myModal11"),
 ]
 
-console.log(modal)
 
-var btn = document.getElementsByClassName["modalbutton"];
-var span = document.getElementsByClassName("close")[0];
 
-for(let i=0; i<modal.length; i ++){
-    modal[i].addEventListener();
+// Get the modal
+var btns = document.getElementsByClassName("modalbutton")
+
+
+console.log(btns)
+
+// var btn = document.getElementsByClassName["modalbutton"];
+
+
+for (let i = 0; i < btns.length; i++) {
+    console.log(btns.length);
+
+    btns[i].addEventListener("click", function () {
+        console.log(this.value);
+        console.log(this.style);
+        console.log("myModal" + this.value);
+        document.getElementById("myModal" + this.value).style.display = "block";
+        
+    });
 }
+// What K came up with
+// document.getElementsByClassName("modalbutton")[0].addEventListener("click", function () {
+//     document.getElementById("myModal" + this.value).style.display = "block"
+// })
 
-document.getElementsByClassName("modalbutton").addEventListener("click",function(){
-  document.getElementById("myModal" + this.value).style.display="block"
-})
-
-document.getElementsByClassName("close").addEventListener("click",function(){
-  document.getElementById("myModal" + this.getAttribute("data-value")).style.display="none"
-})
+// document.getElementsByClassName("close").addEventListener("click", function () {
+//     document.getElementById("myModal" + this.getAttribute("data-value")).style.display = "none"
+// })
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+var close = document.getElementsByClassName("close")
+for (let i = 0; i < close.length; i++) {
+  console.log(close.length);
+  close[i].addEventListener("click", function () {
+      document.getElementById("myModal" + this.getAttribute("data-value")).style.display = "none";
+  });
+}
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+        modal.style.display = "none";
     }
-  }
+}
 
 //   var $modal = $('#modal');
 
@@ -138,7 +155,7 @@ function searchDiscography(artistName) {
 
         });
 
-    }).fail(function() {
+    }).fail(function () {
         alert("Please enter a valid artist name.")
     })
 
