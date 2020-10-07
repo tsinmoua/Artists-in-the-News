@@ -1,24 +1,4 @@
-
-var searchTerm = "dogs"
-
-//based on searchTerm create a query URL
-
-var queryURLstart = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=2SJ66gVmqttnxa7rA3bmcVBUtPgBI0dT";
-
-
-    $.ajax({
-        url: queryURLstart, 
-        method: "GET"})
-        .then(function(response) {
-            console.log(queryURLstart);
-
-        })
-        
-
-        
-
-    
-
+      
 // Get the modal
 var modal = [
     document.getElementById("myModal1"),
@@ -126,3 +106,38 @@ $.ajax({
 });
 
 }
+
+
+
+
+//based on searchTerm create a query URL
+
+var queryURLstart = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=2SJ66gVmqttnxa7rA3bmcVBUtPgBI0dT";
+
+
+    $.ajax({
+        url: queryURLstart, 
+        method: "GET"})
+        .then(function(response) {
+            console.log(queryURLstart);
+            console.log(queryURLstart.article.headline);
+            console.log(queryURLstart.article.pub_date);
+            console.log(queryURLstart.article.web_url);
+            $(".article1").text(queryURLstart.article.headline)
+
+        });
+
+   
+
+//want to display headline of article, URL back to the NYT website, date of publication and author
+//setting those equal to a variable
+
+
+
+
+
+
+
+        
+
+  
