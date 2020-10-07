@@ -3,42 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous">
-
-<!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-prototype.min.css" integrity="sha256-BiKflOunI0SIxlTOOUCQ0HgwXrRrRwBkIYppEllPIok=" crossorigin="anonymous">
-
-<!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-rtl.min.css" integrity="sha256-F+9Ns8Z/1ZISonBbojH743hsmF3x3AlQdJEeD8DhQsE=" crossorigin="anonymous">
-        <!-- Compressed CSS -->
+    <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Artists in the News</title>
 </head>
 
 
 <body>
+  <!--Header-->
+  <header> Artists in the News</header>
+
 
     <!--Search bar/dropdown  -->
-    <div class="row">
-        <div class="columns">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li>
-                    <button class="clear button" id="searchbtn">Search</button>
-                    <a href="#Item-2"><input type="text" placeholder="Artist Name" id="artist"></a>
-                    <ul class="menu">
-                        <li><a href="#Item-2A"></a></li>
-                        <li><a href="#Item-2B"></a></li>
-                    </ul>
-                </li>
-            </ul>           
-        </div>
+  <div class="row">
+    <div class="columns">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <button class="clear button" id="searchbtn">Search</button>
+            <a href="#Item-2"><input type="text" placeholder="Artist Name" ></a>
+            <ul class="menu">
+              <li><a href="#Item-2A"></a></li>
+              <li><a href="#Item-2B"></a></li>
+            </ul>
+        </li>
+        </ul>           
     </div>
+  </div>
 
+<<<<<<< HEAD
     <!-- musical bits -->
     <div class="card">
         <div class="card-section">
@@ -48,22 +41,118 @@
             <h4 class="nameHeading"></h4>
             <ul id="albums">
             </ul>
-        </div>
-    </div>
+=======
 
-    <!-- new bits -->
-    <div class="card">
-        <div class="card-section">
-            <img src="assets/img/generic/rectangle-1.jpg">
+
+      <!-- musical bits -->
+  <div class="music">
+    <button class="modalbutton" value="1" id="myBtn">Artists Discography</button>
+      <div id="myModal1" class="modal">
+        <div class="modal-content">
+          <span data-value="1" class="close">&times;</span>
+          <ul id="albums"></ul>
+>>>>>>> 0b3ee32da66256ae67216a3a633c95f0e0b263ee
         </div>
+      </div>
+      <div class="card-section">
+        <img id="discimage" alt="Artist Photo">
+      </div>
+  </div>
+
+    <!-- news bits -->
+    <div class="newsArticle">
         <div class="card-section">
-            <p>This is a simple card with an image inside a `.card-section`.</p>
+            <h4>Articles from the New York Times</h4>
         </div>
-    </div>    
+
+        <!--article 1-->
+        <button class="modalbutton" value="2" id="myBtn">Article 1</button>
+        <div id="myModal2" class="modal">
+          <div class="modal-content">
+            <span data-value="2" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 2-->  
+        <button class="modalbutton" value="3" id="myBtn">Article</button>
+        <div id="myModal3" class="modal">
+          <div class="modal-content">
+            <span data-value="3" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 3-->            
+        <button class="modalbutton" value="4" id="myBtn">Article</button>
+        <div id="myModal4" class="modal">
+          <div class="modal-content">
+            <span data-value="4" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 4-->
+        <button class="modalbutton" value="5" id="myBtn">Article</button>
+        <div id="myModal5" class="modal">
+          <div class="modal-content">
+            <span data-value="5" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 5-->  
+        <button class="modalbutton" value="6" id="myBtn">Article</button>
+        <div id="myModal6" class="modal">
+          <div class="modal-content">
+            <span data-value="6" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 6-->
+        <button class="modalbutton" value="7" id="myBtn">Article</button>
+        <div id="myModal7" class="modal">
+          <div class="modal-content">
+            <span data-value="7" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 7-->  
+        <button class="modalbutton" value="8" id="myBtn">Article</button>
+        <div id="myModal8" class="modal">
+          <div class="modal-content">
+            <span data-value="8" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 8-->            
+        <button class="modalbutton" value="9" id="myBtn">Article</button>
+        <div id="myModal9" class="modal">
+          <div class="modal-content">
+            <span data-value="9" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 9-->
+        <button class="modalbutton" value="10" id="myBtn">Article</button>
+        <div id="myModal10" class="modal">
+          <div class="modal-content">
+            <span data-value="10" class="close">&times;</span>
+            <p>article...</p>
+          </div>
+        </div>
+        <!--article 10-->  
+        <button class="modalbutton" value="11" id="myBtn">Article</button>
+        <div id="myModal11" class="modal">
+          <div class="modal-content">
+            <span data-value="11" class="close">&times;</span>
+            <p>modal content...</p>
+          </div>
+        </div> 
+    </div>     
 
     
 
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
     <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
 </body>
 </html>
