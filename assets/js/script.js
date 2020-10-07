@@ -1,19 +1,23 @@
-
-var searchTerm = "dogs"
+var searchTerm = "bruno%20mars"
 
 //based on searchTerm create a query URL
-
 var queryURLstart = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=2SJ66gVmqttnxa7rA3bmcVBUtPgBI0dT";
+    $.ajax({
+        url: queryURLstart, 
+        method: "GET"})
+        .then(function(response) {
+            console.log(queryURLstart);
+            console.log(response);
+            console.log(response.response.docs[0].headline.main);
+            $(".article1").text(response.response.docs[0].headline.main)
+            $(".article1").append("<p>" + response.response.docs[0].byline.original + "</p>");
+            $(".article1").append("<a href=" + response.response.docs[0].web_url + ">" + response.response.docs[0].web_url + "</p>");
+            $(".article1").append("<p>" + response.response.docs[0].pub_date + "</p>");
+            
 
-
-$.ajax({
-    url: queryURLstart,
-    method: "GET"
-})
-    .then(function (response) {
-        console.log(queryURLstart);
-
-    })
+        });
+//want to display headline of article, URL back to the NYT website, date of publication and author
+//setting those equal to a variable
 
 
 var modal = [
@@ -35,12 +39,6 @@ var modal = [
 // Get the modal
 var btns = document.getElementsByClassName("modalbutton")
 
-
-console.log(btns)
-
-// var btn = document.getElementsByClassName["modalbutton"];
-
-
 for (let i = 0; i < btns.length; i++) {
     console.log(btns.length);
 
@@ -52,14 +50,6 @@ for (let i = 0; i < btns.length; i++) {
         
     });
 }
-// What K came up with
-// document.getElementsByClassName("modalbutton")[0].addEventListener("click", function () {
-//     document.getElementById("myModal" + this.value).style.display = "block"
-// })
-
-// document.getElementsByClassName("close").addEventListener("click", function () {
-//     document.getElementById("myModal" + this.getAttribute("data-value")).style.display = "none"
-// })
 
 // When the user clicks on <span> (x), close the modal
 var close = document.getElementsByClassName("close")
@@ -70,24 +60,12 @@ for (let i = 0; i < close.length; i++) {
   });
 }
 
-
-
 // When the user clicks anywhere outside of the modal, close it
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+window.onclick = function(event) {
+    if (event.target.getAttribute("class") === "modal") {
+      document.getElementById(event.target.getAttribute("id")).style.display = "none";
     }
-}
-
-//   var $modal = $('#modal');
-
-// $.ajax('/url')
-//   .done(function(resp){
-//     $modal.html(resp).foundation('open');
-// });
-
-
+  }
 
 
 
