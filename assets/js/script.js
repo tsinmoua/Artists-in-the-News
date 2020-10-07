@@ -15,32 +15,30 @@ var modal = [
 
 console.log(modal)
 
-var btn = document.getElementsByClassName["modalbutton"];
-var span = document.getElementsByClassName("close")[0];
-
-for(let i=0; i<modal.length; i ++){
-    modal[i].addEventListener();
+var btns = document.getElementsByClassName("modalbutton")
+for (let i = 0; i < btns.length; i++) {
+  console.log(btns.length);
+  btns[i].addEventListener("click", function () {
+      console.log(this.value);
+      console.log(this.style);
+      console.log("myModal" + this.value);
+      document.getElementById("myModal" + this.value).style.display = "block";
+  });
+}
+var close = document.getElementsByClassName("close")
+for (let i = 0; i < close.length; i++) {
+  close[i].addEventListener("click", function () {
+      document.getElementById("myModal" + this.getAttribute("data-value")).style.display = "none";
+  });
 }
 
-document.getElementsByClassName("modalbutton").addEventListener("click",function(){
-  document.getElementById("myModal" + this.value).style.display="block"
-})
-
-document.getElementsByClassName("close").addEventListener("click",function(){
-  document.getElementById("myModal" + this.getAttribute("data-value")).style.display="none"
-})
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target.getAttribute("class") === "modal") {
+      document.getElementById(event.target.getAttribute("id")).style.display = "none";
     }
   }
+
 
 //   var $modal = $('#modal');
 
