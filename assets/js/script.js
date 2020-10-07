@@ -80,6 +80,7 @@ window.onclick = function (event) {
     }
 }
 
+
 //   var $modal = $('#modal');
 
 // $.ajax('/url')
