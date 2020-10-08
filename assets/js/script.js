@@ -43,6 +43,7 @@ console.log(btns)
 
 for (let i = 0; i < btns.length; i++) {
     console.log(btns.length);
+    console.log(btns)
 
     btns[i].addEventListener("click", function () {
         console.log(this.value);
