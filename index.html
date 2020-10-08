@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+
     <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous">
 
@@ -14,7 +14,10 @@
 
     <!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-rtl.min.css" integrity="sha256-F+9Ns8Z/1ZISonBbojH743hsmF3x3AlQdJEeD8DhQsE=" crossorigin="anonymous">    
-        <title>Artists in the News</title>
+    <!--googlefonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Fenix&family=Ramaraja&family=Rowdies:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Artists in the News</title>
 </head>
 
 
@@ -22,6 +25,7 @@
   <!--Header-->
   <header class="row"> 
     <div class="small-12 medium-12 large-12 columns">
+      <button></button>
       <h1>Artists in the News</h1>
     </div>
   </header>
@@ -32,19 +36,20 @@
     <div class="small-12 medium-12 large-12 columns">
       <ul class="dropdown menu" data-dropdown-menu>
         <li>
+          <a href="#Item-2"><input type="text" placeholder="Artist Name" class="input" ></a>
           <button class="clear button" id="searchbtn">Search</button>
-            <a href="#Item-2"><input type="text" placeholder="Artist Name" ></a>
-            <ul class="menu">
+          <ul class="menu">
               <li><a href="#Item-2A"></a></li>
               <li><a href="#Item-2B"></a></li>
-            </ul>
+      </ul>
         </li>
-        </ul>           
+            </ul> 
     </div>
+  </div>
 
       <!-- musical bits -->
   <div class="row">
-    <div class="small-6 medium-6 large-6 columns music">
+    <div class="small-12 medium-6 large-6 columns music">
         <button class="modalbutton" value="1" id="myBtn">Artists Discography</button>
           <div id="myModal1" class="modal">
             <div class="modal-content">
@@ -59,13 +64,13 @@
   </div>
 
     <!-- news bits -->
-      <div class="small-6 medium-6 large-6 columns newsArticle">
+      <div class="small-12 medium-6 large-6 columns newsArticle">
           <div class="card-section">
               <h4>Articles from the New York Times</h4>
           </div>
 
           <!--article 1-->
-          <button class="small-12 medium-12 large-12 columns columns modalbutton" value="2" id="myBtn">Article 1</button>
+          <button class="art small-12 medium-12 large-12 columns columns modalbutton" value="2" id="myBtn">Article 1</button>
           <div id="myModal2" class="modal">
             <div class="modal-content">
               <span data-value="2" class="close">&times;</span>
@@ -73,7 +78,7 @@
             </div>
           </div>
           <!--article 2-->  
-          <button class="small-12 medium-12 large-12 columns columns modalbutton" value="3" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns columns modalbutton" value="3" id="myBtn">Article</button>
           <div id="myModal3" class="modal">
             <div class="modal-content">
               <span data-value="3" class="close">&times;</span>
@@ -81,7 +86,7 @@
             </div>
           </div>
           <!--article 3-->            
-          <button class="small-12 medium-12 large-12 columns columns modalbutton" value="4" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns columns modalbutton" value="4" id="myBtn">Article</button>
           <div id="myModal4" class="modal">
             <div class="modal-content">
               <span data-value="4" class="close">&times;</span>
@@ -89,7 +94,7 @@
             </div>
           </div>
           <!--article 4-->
-          <button class="small-12 medium-12 large-12 columns modalbutton" value="5" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns modalbutton" value="5" id="myBtn">Article</button>
           <div id="myModal5" class="modal">
             <div class="modal-content">
               <span data-value="5" class="close">&times;</span>
@@ -97,7 +102,7 @@
             </div>
           </div>
           <!--article 5-->  
-          <button class="small-12 medium-12 large-12 columns columns modalbutton" value="6" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns columns modalbutton" value="6" id="myBtn">Article</button>
           <div id="myModal6" class="modal">
             <div class="modal-content">
               <span data-value="6" class="close">&times;</span>
@@ -105,7 +110,7 @@
             </div>
           </div>
           <!--article 6-->
-          <button class="small-12 medium-12 large-12 columnss modalbutton" value="7" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columnss modalbutton" value="7" id="myBtn">Article</button>
           <div id="myModal7" class="modal">
             <div class="modal-content">
               <span data-value="7" class="close">&times;</span>
@@ -113,7 +118,7 @@
             </div>
           </div>
           <!--article 7-->  
-          <button class="small-12 medium-12 large-12 columns modalbutton" value="8" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns modalbutton" value="8" id="myBtn">Article</button>
           <div id="myModal8" class="modal">
             <div class="modal-content">
               <span data-value="8" class="close">&times;</span>
@@ -121,7 +126,7 @@
             </div>
           </div>
           <!--article 8-->            
-          <button class="small-12 medium-12 large-12 columns modalbutton" value="9" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns modalbutton" value="9" id="myBtn">Article</button>
           <div id="myModal9" class="modal">
             <div class="modal-content">
               <span data-value="9" class="close">&times;</span>
@@ -129,7 +134,7 @@
             </div>
           </div>
           <!--article 9-->
-          <button class="small-12 medium-12 large-12 columns modalbutton" value="10" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns modalbutton" value="10" id="myBtn">Article</button>
           <div id="myModal10" class="modal">
             <div class="modal-content">
               <span data-value="10" class="close">&times;</span>
@@ -137,7 +142,7 @@
             </div>
           </div>
           <!--article 10-->  
-          <button class="small-12 medium-12 large-12 columns modalbutton" value="11" id="myBtn">Article</button>
+          <button class="art small-12 medium-12 large-12 columns modalbutton" value="11" id="myBtn">Article</button>
           <div id="myModal11" class="modal">
             <div class="modal-content">
               <span data-value="11" class="close">&times;</span>
