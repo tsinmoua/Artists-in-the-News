@@ -1,3 +1,95 @@
+html {
+  align-content: center;
+}
+
+body {
+  background-image: url(../images/body.jpg);
+}
+
+header {
+  background-image: url(../images/header1.jpg);
+  height: 225px;
+  margin: 3%;
+}
+
+h1 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 75px;
+  margin-top: 4%;
+  height: 154px;
+  text-align: center;
+  text-shadow: 3px 3px 0px rgb(112, 105, 122);
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(128, 128, 128, 0.2));
+}
+
+.input {
+  width: 1135px;
+  height: 50px;
+  font-family: 'Fenix', serif;
+  font-size: 20px;
+}
+
+#searchbtn {
+  font-family: 'Fenix', serif;
+  font-size: 20px;
+  color: whitesmoke;
+  height: 40px;
+  padding: 1%;
+  margin-left: 2%;
+  background-color: rgb(25, 2, 68);
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.music {
+  font-family: 'Fenix', serif;
+  font-size: 15px;
+  background-color: rgb(25, 2, 68);
+  color: azure;
+  height: 617px;
+  float: left;
+  width: 45%;
+}
+
+#myBtn {
+  font-family: 'Fenix', serif;
+  font-size: 35px;
+  background-color: rgb(25, 2, 68);
+  color: azure;
+  margin-top: 2%;
+
+}
+
+.newsArticle {
+  font-family: 'Fenix', serif;
+  font-size: 35px;
+  background-color: rgb(25, 2, 68);
+  color: azure;
+  float: right;
+  width: 45%;
+}
+
+.art {
+  height: 45px;
+  font-family: 'Fenix', serif;
+  color: azure;
+  font-size: 25px;
+}
+
+footer {
+  background-image: url(../images/footer1.jpg);
+  height: 50px;
+  text-align: center;
+  margin: 2%;
+  font-family: 'Fenix', serif;
+  font-size: 30px;
+  color: whitesmoke;
+  text-shadow: 4px 4px 0px rgb(0, 0, 0);
+}
+
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -37,4 +129,32 @@
   }
 #discimage {
     width: 200px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .input {
+    width: 921px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .input {
+    width: 821px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .input {
+    width: 631px;
+  }
+
+  .music {
+    height: 552px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .input {
+    width: 400px;
+  }
 }
