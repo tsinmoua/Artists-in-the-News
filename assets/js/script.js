@@ -16,6 +16,7 @@ var btns = document.getElementsByClassName("modalbutton")
 
 for (let i = 0; i < btns.length; i++) {
     // console.log(btns.length);
+    // console.log(btns)
 
     btns[i].addEventListener("click", function () {
         // console.log(this.value);
@@ -64,10 +65,11 @@ $("#searchbtn").on("click", function (event) {
     $(".nameHeading").empty();
     $("#discimage").attr("src", "");
     $("#discimage").attr("alt", "");
-    artistEl = $("#artist");
+    artistEl = $(".input");
     // console.log(artistEl.val());
     searchDiscography(artistEl.val());
     searchNews(artistEl.val())
+    previousSearched(artistEl.val())
     $("#contentSection").css("visibility", "visible");
 })
 
@@ -84,7 +86,7 @@ function searchDiscography(artistName) {
 
         // console.log("Image URL: " + response.artists[0].strArtistThumb);
         $("#discimage").attr("src", response.artists[0].strArtistThumb);
-        $("#discimage").attr("alt", "Image of " + response.artists[0].strArtist);
+        // $("#discimage").attr("alt", "Image of " + response.artists[0].strArtist);
         // name of artist
         // console.log("Artist: " + response.artists[0].strArtist);
         $(".nameHeading").text(response.artists[0].strArtist);
@@ -145,3 +147,9 @@ function searchNews(artistName) {
 
 //want to display headline of article, URL back to the NYT website, date of publication and author
 //setting those equal to a variable 
+
+function previousSearched(artistName) {
+    var searched = $("<option>");
+    searched.attr("value", artistName)
+    $("#previousArtists").prepend(searched)
+}
